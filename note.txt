@@ -24,3 +24,25 @@ node = *head ;
 如果要取对象的地址，用 & 号：
 head = &node;
 NULL实际上是0
+(*head).next效果相当于head->next。
+一般用法：如果是指针就用箭头，是对象就用点
+注意不要在原head上更改，会洗掉初始地址。
+ void printLinkedList(ListNode* head){
+        if(head == NULL){
+            cout<<" "<<endl;
+        }
+        else{
+            ListNode* start = head;
+            while(start != NULL){
+                cout<<start->val<<" ";
+                start = start->next;
+            }
+            cout<<endl;
+        }
+    }
+}
+ListNode newNode(100): 叫作静态声明(static)
+ListNode* newNode = new ListNode(100): 叫作动态声明(dynamic)
+静态声明只在一组大括号的domain里有效
+动态声明可以在函数外使用，但要手动释放内存
+只要有new关键字就是动态声明
