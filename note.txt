@@ -1,0 +1,26 @@
+链表：面试里90%以上是单向链表，重要性仅次于数组。
+指针一般是4个字节
+vector的地址和index是换算的，所以vector里面元素是连续的，linkedlist地址是不一定连续。
+vector添加新元素的话，相当于把其他元素移了一格，O(n)，而linked list只需要增加第一个的pointer, O(1)
+linked list的指向一定不能出错
+如果添加删除删除很频繁的话，用linked list好，如果查找多，用vector好
+linked list和vector一样都可以排序。
+vector能实现的功能linked list几乎都能实现，只是速度会有区别
+listNode* next 代表next对象的地址
+listNode next代表next对象本身
+NULL在C++里一定要大写
+在leetcode里，input代表的是linked list的值
+如果input是[1,2,3]意思是初始地址是1的地址，1的node指向2的node, 2的node指向3的node，3的node指向null.
+在面试中90以上的情况不要改linked list node中存的值，而只是改指向关系。
+两道基本linked list题
+reverse linked list
+merge two sorted linked list.
+linked list和vector类似，一般先检查开头第一个元素是不是NULL，如果是的话直接return.
+当 * 作用在声明语句中，意思是提供了此对象的地址，比如：
+Listnode node
+Listnode* head
+当 * 作用在赋值语句中，意思是取此地址对应的对象，比如：
+node = *head ;
+如果要取对象的地址，用 & 号：
+head = &node;
+NULL实际上是0
