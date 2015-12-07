@@ -8,15 +8,17 @@ public:
         dummy.next = head;
         ListNode* cur = &dummy;
         int curNum;
+        bool isDup = false;
         while(cur->next->next != NULL){
             if(cur->next->val == cur->next->next->val){
+                isDup = true;
                 curNum = cur->next->val;
                 delete(cur->next);
                 cur->next = cur->next->next;
                 continue;
             }
             
-            if(cur->next->val == curNum){
+            if(isDup == true && cur->next->val == curNum){
                 delete(cur->next);
                 cur->next = cur->next->next;
                 continue;
