@@ -8,7 +8,7 @@ public:
         queue<TreeNode*> q1;
         queue<TreeNode*> q2;
         q1.push(root);
-        while(!(q1.empty() && q2.empty())){
+        while(!q1.empty()){
             TreeNode* temp = q1.front();
             q1.pop();
             res_temp.push_back(temp->val);
