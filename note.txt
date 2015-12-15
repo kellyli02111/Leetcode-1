@@ -48,3 +48,4 @@ ListNode* newNode = new ListNode(100): 叫作动态声明(dynamic)
 只要有new关键字就是动态声明
 
 String 最后一位的下一位可看作'\0'
+String s[i]中一位代表是单引号的char type.
