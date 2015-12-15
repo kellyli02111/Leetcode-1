@@ -46,3 +46,5 @@ ListNode* newNode = new ListNode(100): 叫作动态声明(dynamic)
 静态声明只在一组大括号的domain里有效
 动态声明可以在函数外使用，但要手动释放内存
 只要有new关键字就是动态声明
+
+String 最后一位的下一位可看作'\0'
