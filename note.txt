@@ -51,3 +51,4 @@ String 最后一位的下一位可看作'\0'
 String s[i]中一位代表是单引号的char type.
 
 把任意二叉树变为heap时间复杂度是O(n)
+root的时间复杂度是O(log(n))，leaf的时间复杂度是O(1).
