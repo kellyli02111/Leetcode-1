@@ -12,7 +12,7 @@ public:
             minVal = min(minVal, nums[i]);
         }
         int bSize = (maxVal - minVal - 1) / (n - 1) + 1;
-        int count = (maxVal - minVal) / bSize + 1;
+        int count = (maxVal - minVal) / bSize + 1;//在能整除的情况下会多一个桶，但若不能整除就一定要有 + 1
         vector<int> bMax(count, -1);
         vector<int> bMin(count, -1);
         for(int i = 0; i < n; i++){
