@@ -53,3 +53,5 @@ String s[i]中一位代表是单引号的char type.
 把任意二叉树变为heap时间复杂度是O(n)
 root的时间复杂度是O(log(n))，leaf的时间复杂度是O(1).
 priority queue如果提供data stream的话时间复杂度是O(nlog(n)).
+
+求ceiling的手法：ceil(a/b) 可以用(a - 1) / b + 1
