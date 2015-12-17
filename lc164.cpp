@@ -1,3 +1,5 @@
+//最优的桶的大小为可能有的maximum gap的最小值 - 1
+//等于(maxVal - minVal - 1) / (n - 1) + 1 = ceil((maxVal - minVal) / (n - 1))
 class Solution {
 public:
     int maximumGap(vector<int>& nums) {
@@ -9,7 +11,7 @@ public:
             maxVal = max(maxVal, nums[i]);
             minVal = min(minVal, nums[i]);
         }
-        int bSize = (maxVal - minVal) / n + 1;
+        int bSize = (maxVal - minVal - 1) / (n - 1) + 1;
         int count = (maxVal - minVal) / bSize + 1;
         vector<int> bMax(count, -1);
         vector<int> bMin(count, -1);
