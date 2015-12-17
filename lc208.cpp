@@ -1,3 +1,17 @@
+//这样也行
+/*class TrieNode {
+public:
+    TrieNode* child[26];
+    bool is_end;
+    // Initialize your data structure here.
+    TrieNode() {
+        for(int i = 0; i < 26; i++){
+            child[i] = NULL;
+        }
+        is_end = false;
+    }
+};*/
+
 class TrieNode {
 public:
     vector<TrieNode*> child;
