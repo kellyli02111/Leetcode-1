@@ -55,3 +55,4 @@ root的时间复杂度是O(log(n))，leaf的时间复杂度是O(1).
 priority queue如果提供data stream的话时间复杂度是O(nlog(n)).
 
 求ceiling的手法：ceil(a/b) 可以用(a - 1) / b + 1
+TrieNode* child[26] 不initialize的话不是NULL.
