@@ -36,12 +36,9 @@ public:
         queue<TreeNode*> q1;
         if(data == "[]") return NULL;
         int begin = 1;
-        int length = 1;
-        while(data[begin + length] != ','){
-            length++;
-        }
-        string segment = data.substr(begin, length);
-        begin = begin + length + 1;
+        int pos = data.find(',',begin);
+        string segment = data.substr(begin, pos - begin);
+        begin = pos + 1;
         int val = stoi(segment);
         TreeNode* root = new TreeNode(val);
         q1.push(root);
@@ -53,12 +50,9 @@ public:
                 cur = q1.front();
                 q1.pop();
             }
-            int length = 1;
-            while(data[begin + length] != ','){
-                length++;
-            }
-            segment = data.substr(begin, length);
-            begin = begin + length + 1;
+            pos = data.find(',',begin);
+            segment = data.substr(begin, pos - begin);
+            begin = pos + 1;
             if(segment != "null"){
                 int val = stoi(segment);
                 TreeNode* newNode = new TreeNode(val);
