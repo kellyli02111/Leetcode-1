@@ -5,7 +5,7 @@ public:
         vector<int> res;
         int n = nums.size();
         for(int i = 0; i < n; i++){
-            if(m[target - nums[i]] != 0){
+            if(m.find(target - nums[i]) != m.end()){
                 res.push_back(m[target - nums[i]]);
                 res.push_back(i + 1);
                 return res;
