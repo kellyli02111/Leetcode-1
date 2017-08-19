@@ -18,6 +18,6 @@ class Solution(object):
             else:
                 myDict[s[end]] = 1
                 end = end + 1
-            res = max(res, (end - start))
+                res = max(res, (end - start))
         return res
             
